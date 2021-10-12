@@ -1,0 +1,14 @@
+https://www.piku.co.kr/w/1OwSzL
+비번: gwnu.ac.kr
+각 강별로 누구 투표했는지 적어주세용
+
+setwd("C:/Users/이어진/Documents/ML_for_Hackers")
+library(ggplot2)
+
+data <- read.csv("ideal.csv")
+data
+dist.data <- dist(data)
+dist.data
+dist.data.mds <- cmdscale(dist.data)
+plot(dist.data.mds, type='n')
+text(dist.data.mds, c("이어진", "김동호", "최진욱", "이윤호", "안익현", "최명현", "김상웅", "전재진", "양민규", "오경환", "이현균", "이재명", "이재빈", "김태희", "신용관", "최동현"))
